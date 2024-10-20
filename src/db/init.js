@@ -6,6 +6,9 @@ export function initDatabase() {
   mongoose.connect(DATABASE_URL)
 
   mongoose.connection.on('connected', () => {
-    console.info('Connected to the MongoDB database successfully')
+    console.info(
+      'Connected to the MongoDB database successfully:',
+      DATABASE_URL,
+    )
   })
 }
